@@ -1,0 +1,6 @@
+idProveedor
+nombreProveedor
+direccionProveedor
+nitProveedor
+telefonoProveedor
+

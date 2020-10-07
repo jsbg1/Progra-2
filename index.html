@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Proveedores</title>
+        <link rel="stylesheet" href="estilos/estilos_proveedor.css">
+        <link rel="stylesheet" href="estilos/barra_nav.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href=""><span class="" ></span>Proveedores</a>
+                    
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <h>Lista de proveedores</h>
+
+    <a class="nuevo" href="javascript:abrir()">Ingrese un nuevo proveedor</a><!--Los estilo de este vinvulo estan de la linea 71 a la 88  de estilos_empleados.css-->
+   
+    <div class="ventana" id="ventana">
+
+        <section class="form-registro"><!-- Los estilos de este seccion estan del la linea 9 a la 68 de estilos_empleados.css-->
+            <div id="cerrar"><a href="javascript:cerrar()"><img src="imagenes/cerrar.png"></a></div>
+            <form action="#" method="post" >
+                <h2>Ingreso de Proveedores</h2> 
+
+                <label><b>Id Proveedor </b> </label>
+                    <input class="controls" type="int"  name="idProveedor" id="idProveedor" placeholder="Ingrese ID de proveedor" required>
+                
+                <label><b>Nombre de proveedor: </b></label>
+                    <input class="controls" type="text" name="nombreProveedor" id="nombreProveedor" placeholder="Ingrese el nombre del proveedor" required>
+
+                <label><b>Direccion: </b></label>
+                    <input class="controls" type="text" name="direccionProveedor" id="direccionProveedor" placeholder="Ingrese la direccion" required>
+
+                <label><b>Nit: </b></label>
+                    <input class="controls" type="text" name="nitProveedor" id="nitProveedor" placeholder="Ingrese el nit del proveedor" required>
+                
+                <label><b>Telefono: </b></label>
+                    <input class="controls" type="text" name="telefonoProveedor" id="telefonoProveedor" placeholder="Telefono del Proveedor" required>
+
+                <button class="botons" name="btn_agregar" id="btn_agregar" value="agregar"><b>Agregar</b></button>
+            </form>    
+        </section>
+    </div>
+    
+    <div class="ventana_modificar" id="ventana_modificar">
+        <section class="form-registro"><!-- -->
+            <div id="cerrar"><a href="javascript:cerrar_modificar()"><img src="imagenes/cerrar.png"></a></div>
+            <form action="#" method="post" >
+                
+                <h2>Modificar datos del Proveedor</h2> 
+                <label for="lbl_id" ><b>ID del Proveedor</b></label>
+                <input class="controls" type="text" name="txt_id" id="txt_id" class="form-control" value="0" readonly>
+                <label><b>Nombre: </b></label>
+                <input class="controls" type="text" name="txt_nombres" id="txt_nombres" placeholder="Ejemplo: Jardines S.A." required>
+                <label><b>Dirección: </b></label>
+                <input class="controls" type="text" name="txt_direccion" id="txt_direccion" placeholder="Ejemplo: Guatemala" required>
+                <label><b>Telefono: </b></label>
+                <input class="controls" type="number" name="txt_telefono" id="txt_telefono" placeholder="Ejemplo: 4222-0881" required>
+                <label><b> Nit: </b></label>
+                <input class="controls" type="text" name="txt_nit" id="txt_nit" placeholder="Ejemplo: 741774-7" required>
+                
+                <button class="boton_modificar" name="btn_modificar" id="btn_modificar" value="modificar"><b>Modificar</b></button>
+            </form>    
+        </section>
+    </div>
+    
+    
+    <div id="main-tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Direccion</th>
+		<th>Telefono</th>
+                <th>Nit</th>
+               
+            </tr>
+        </thead>
+       
+        <tbody>
+            <tr>
+                <td> <button name="btn_modificar" id="btn_mod" value="modificar" onclick="abrir_modificar()"><img id="mod" src="imagenes/cuaderno.png"></button></td>
+                <td><button name="btn_modificar" id="btn_eli" value="eliminar"><img id="eli" src="imagenes/borrar.png"></button></td>
+                <td>1990-12-01</td>
+                <td>Jardines S.A.</td>
+                <td>Guatemala</td>
+                <td>4222-0881</td>
+                <td>741774-7</td>
+                </tr>
+        </tbody>
+    </table>
+    </div>
+    
+    <br><br><br><br><br><br><br><br><br>
+    <footer>
+        <div class="container-body">
+        <div class="container-footer">
+            <div class="copyright">
+                © 2020 Todos los derechos reservados | <a href="#">Nombre empresa</a>
+            </div>
+            <div class="information">
+                <a href="#"> Información de la compañia</a> | <a href="#"> Privacidad y politicas</a> |<a href="#"> Terminos y condiciones</a>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script>
+        function abrir(){
+            document.getElementById("ventana").style.display="block";
+        }
+        function cerrar(){
+            document.getElementById("ventana").style.display="none";
+        }
+        
+        function abrir_modificar(){
+            document.getElementById("ventana_modificar").style.display="block";
+        }
+        function cerrar_modificar(){
+            document.getElementById("ventana_modificar").style.display="none";
+        }
+    </script>
+</body>
+</html>
